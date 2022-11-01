@@ -73,7 +73,8 @@ main {
   @media (min-width: 1120px) {
     .container {
       width: 1120px;
-      margin: 0 auto; } }
+      margin: 0 auto;
+      margin-left: 320px; } }
 
 .header-navbar {
   display: flex;
@@ -645,13 +646,12 @@ main {
         width: 312px; } }
 
 .burger {
-  position: absolute;
+  position: fixed;
   z-index: 101;
   flex-direction: column;
   width: 320px;
   max-width: 320px;
   height: 100vh;
-  position: fixed;
   padding: 20px;
   gap: 32px;
   transition: all 0.6s ease;
@@ -661,6 +661,10 @@ main {
   @media (min-width: 768px) and (max-width: 1119px) {
     .burger {
       box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2); } }
+  @media (min-width: 1120px) and (max-width: 1550px) {
+    .burger {
+      width: 1120px;
+      margin: 0 auto; } }
   @media (min-width: 1440px) {
     .burger {
       display: flex;
@@ -668,8 +672,7 @@ main {
       width: 320px;
       max-width: 320px;
       height: 100vh;
-      position: absolute;
-      transform: translateX(-320px);
+      position: fixed;
       padding: 20px;
       gap: 32px;
       transition: all 0.2s ease;
@@ -677,10 +680,6 @@ main {
       top: 0px;
       z-index: 99;
       background: #FFFFFF; } }
-  @media (min-width: 1441px) and (max-width: 1880px) {
-    .burger {
-      width: 280px;
-      transform: translateX(-280px); } }
   .burger__link {
     color: #1B1C21;
     position: relative;

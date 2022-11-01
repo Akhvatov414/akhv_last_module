@@ -63,7 +63,8 @@ main {
   gap: 16px; }
 
 .container {
-  width: 320px; }
+  width: 320px;
+  position: relative; }
   @media (min-width: 768px) and (max-width: 1119px) {
     .container {
       width: 768px;
@@ -73,9 +74,6 @@ main {
     .container {
       width: 1120px;
       margin: 0 auto; } }
-  @media (min-width: 1440px) {
-    .container {
-      margin-left: 320px; } }
 
 .header-navbar {
   display: flex;
@@ -670,7 +668,8 @@ main {
       width: 320px;
       max-width: 320px;
       height: 100vh;
-      position: fixed;
+      position: absolute;
+      transform: translateX(-320px);
       padding: 20px;
       gap: 32px;
       transition: all 0.2s ease;
@@ -678,6 +677,10 @@ main {
       top: 0px;
       z-index: 99;
       background: #FFFFFF; } }
+  @media (min-width: 1441px) and (max-width: 1880px) {
+    .burger {
+      width: 280px;
+      transform: translateX(-280px); } }
   .burger__link {
     color: #1B1C21;
     position: relative;
